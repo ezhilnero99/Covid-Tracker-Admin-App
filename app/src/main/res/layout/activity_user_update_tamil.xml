@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!--    header part-->
+
+    <View
+        android:id="@+id/pageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:background="@color/purple" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/pageHeader"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/cadman_normal"
+        android:text="@string/user_details"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp" />
+
+    <ImageView
+        android:id="@+id/addIV"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignBottom="@id/pageHeader"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/plus_asset"
+        android:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/logoutIV"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignBottom="@id/pageHeader"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_toLeftOf="@id/addIV"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/signout_asset"
+        android:tint="@color/white" />
+    <ImageView
+        android:id="@+id/locationIV"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignBottom="@id/pageHeader"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_toLeftOf="@id/logoutIV"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/gps_asset"
+        android:tint="@color/white" />
+
+
+    <!--    header end-->
+
+    <!--    body part-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pageHeader"
+        android:layout_marginBottom="@dimen/_40sdp">
+
+        <RelativeLayout
+            android:id="@+id/phoneRL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/bellota"
+                android:text="@string/phone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:id="@+id/boxAsset1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/box_large_asset" />
+
+            <EditText
+                android:id="@+id/phoneET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/boxAsset1"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:backgroundTint="@color/grey"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/searchBT"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/phoneRL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/rectangle_asset"
+            android:fontFamily="@font/cadman_normal"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userDetailsRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/searchBT"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:padding="@dimen/_15sdp" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/progressIV"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/loading_asset"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <!--    body end-->
+
+    <View
+        android:id="@+id/pageTrailing"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple" />
+    <TextView
+        android:id="@+id/languageTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/pageTrailing"
+        android:layout_alignRight="@id/pageTrailing"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:fontFamily="@font/cadman_normal"
+        android:text="@string/language"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp" />
+
+</RelativeLayout>

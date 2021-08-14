@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:layout_marginRight="@dimen/_15sdp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/searchRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/bellota"
+            android:text=""
+            android:textColor="@color/purple"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tempET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTV"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:fontFamily="@font/bellota"
+            android:hint="Enter the Temperature"
+            android:inputType="number"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/mid_grey"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tempTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTV"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_toRightOf="@id/tempET"
+            android:fontFamily="@font/bellota"
+            android:hint="\'Farenheit"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/purple"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/submitTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_110sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/cancelTV"
+            android:fontFamily="@font/bellota"
+            android:padding="@dimen/_5sdp"
+            android:text="Submit"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/cancelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_110sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:fontFamily="@font/bellota"
+            android:text="Cancel"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_12sdp" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/progressIV"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/loading_asset"
+            android:scaleType="centerCrop"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
