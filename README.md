@@ -14,7 +14,7 @@ A Mobile application developed to help track peoples visits in various public pl
 
 The page shows the number of people recorded by our app everyday to keep track with the count and a graph showcasing the said data.
 
-The App is available both in **English** and **Tamil** languages.
+The App is available both in `English` and `Tamil` languages.
 
 ![Home Page](/imgs/home.jpg) | ![language Page](/imgs/lang.jpg) | ![Tamil Home Page](/imgs/tamil.jpg)
 
